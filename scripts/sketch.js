@@ -28,6 +28,8 @@ const s = (p) => {
     dino.mirrorX(-1);
     p.drawSprites();
 
+
+
     //Moviment del personatge noia sobre l'eix X de dreta - esquerra.
 
     if(p.keyIsDown(p.RIGHT_ARROW)){
