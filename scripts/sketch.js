@@ -38,6 +38,9 @@ const s = (p) => {
       noia.mirrorX(-1);
       noia.position.x = noia.position.x-5;
     }
+
+    //Moviment del personatge noia sobre l'eix Y de adalt - abaix.
+
     if(p.keyIsDown(p.UP_ARROW)){
       noia.position.y = noia.position.y-5;
     }
