@@ -38,6 +38,12 @@ const s = (p) => {
       noia.mirrorX(-1);
       noia.position.x = noia.position.x-5;
     }
+    if(p.keyIsDown(p.UP_ARROW)){
+      noia.position.y = noia.position.y-5;
+    }
+    if(p.keyIsDown(p.DOWN_ARROW)){
+      noia.position.y = noia.position.y+5;
+    }
 
     //Moviment del personatge dino sobre l'eix X de esquerra - dreta.
 
