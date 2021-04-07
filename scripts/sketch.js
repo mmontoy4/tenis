@@ -2,8 +2,11 @@ const s = (p) => {
   var pilota;
   var noia;
   var dino;
+  var fondo;
 
   p.preload = function() {
+
+    fondo = p.loadImage("img/pissta.png");
 
   }
 
@@ -24,11 +27,38 @@ const s = (p) => {
   }
 
   p.draw = function() {
-    p.background(155);
+    p.background(fondo);
     dino.mirrorX(-1);
     p.drawSprites();
 
+    //Moviment pilota de tenis
 
+    pilota.bounce(pilota);
+
+    //La pilota rebota amb els limits de la pista
+
+    for(var i=0; i<pilota; i++) {
+    var s = pilota;
+    if(s.position.x<0) {
+      s.position.x = 1;
+      s.velocity.x = abs(s.velocity.x);
+    }
+
+    if(s.position.x>width) {
+      s.position.x = width-1;
+      s.velocity.x = -abs(s.velocity.x);
+    }
+
+    if(s.position.y<0) {
+      s.position.y = 1;
+      s.velocity.y = abs(s.velocity.y);
+    }
+
+    if(s.position.y>height) {
+      s.position.y = height-1;
+      s.velocity.y = -abs(s.velocity.y);
+    }
+  }
 
     //Moviment del personatge noia sobre l'eix X de dreta - esquerra.
 
