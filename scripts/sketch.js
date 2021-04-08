@@ -24,6 +24,7 @@ const s = (p) => {
     dino.addAnimation('pam','sprites/dino/Walk1.png','sprites/dino/Walk10.png');
     dino.changeAnimation('pam');
 
+
   }
 
   p.draw = function() {
@@ -33,32 +34,7 @@ const s = (p) => {
 
     //Moviment pilota de tenis
 
-    pilota.bounce(pilota);
-
     //La pilota rebota amb els limits de la pista
-
-    for(var i=0; i<pilota; i++) {
-    var s = pilota;
-    if(s.position.x<0) {
-      s.position.x = 1;
-      s.velocity.x = abs(s.velocity.x);
-    }
-
-    if(s.position.x>width) {
-      s.position.x = width-1;
-      s.velocity.x = -abs(s.velocity.x);
-    }
-
-    if(s.position.y<0) {
-      s.position.y = 1;
-      s.velocity.y = abs(s.velocity.y);
-    }
-
-    if(s.position.y>height) {
-      s.position.y = height-1;
-      s.velocity.y = -abs(s.velocity.y);
-    }
-  }
 
     //Moviment del personatge noia sobre l'eix X de dreta - esquerra.
 
@@ -82,14 +58,25 @@ const s = (p) => {
 
     //Moviment del personatge dino sobre l'eix X de esquerra - dreta.
 
-  /*  if(p.keyIsDown(p.RIGHT_ARROW)){
+   if(p.keyDown('a')){
       dino.mirrorX(-1);
       dino.position.x = dino.position.x-5;
     }
-    if(p.keyIsDown(p.LEFT_ARROW)){
+    if(p.keyDown('d')){
       dino.mirrorX(-1);
       dino.position.x = dino.position.x+5;
-    }*/
+    }
+
+    //Moviment del personatge dino sobre l'eix Y de adalt - abaix.
+
+    if(p.keyDown('w')){
+
+       dino.position.y = dino.position.y-5;
+     }
+     if(p.keyDown('s')){
+
+       dino.position.y = dino.position.y+5;
+     }
 
   }
 }
