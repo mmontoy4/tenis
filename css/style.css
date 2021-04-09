@@ -1,0 +1,148 @@
+html{
+  background-color: #34a0a4;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+/*Barra de navegació*/
+ul {
+  list-style-type: none;
+  font-family: 'Denk One', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #76c893;
+  border-top: 3px solid #073b4c;
+  border-bottom: 3px solid #073b4c;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #52b69a;
+}
+
+.active {
+  background-color: #1e6091;
+  color: white;
+}
+/*Contenedor PACMAN*/
+#canvas{
+    position:absolute;
+    top: 280px;
+    right:33.333%;
+}
+
+header{
+  background-color: #D9ED92;
+}
+
+.cap{
+  /*margin-left: 33.333%;
+  margin-right:33.333%;*/
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+
+}
+
+.formulari{
+  border: 15px solid #fb8500;
+  border-radius: 20px;
+  width:20%;
+  padding: 20px;
+  margin-left: 40%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+form h3{
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+form label{
+	width: 95px;
+	font-weight:bold;
+	display:inline-block;
+  font-family: 'RocknRoll One', sans-serif;
+  color:black;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border-bottom:2px solid #03045e;
+	background-color:white;
+	margin:8px 0;
+	display:inline-block;
+}
+
+input[type="button"]{
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.drets{
+  position:absolute;
+  top: 75%;
+  left:80%;
+  border: 3px double black;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+div.drets p{
+margin: 20px;
+font-family: 'DotGothic16', sans-serif;
+}
+
+.peu{
+  position:absolute;
+  top: 91%;
+  right:75%;
+  border: 3px solid white;
+  width: 380px;
+  height: 50px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+div.peu p{
+  background-color: white;
+  margin: 10px;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+div#dades{
+  float:right;
+  margin-left:30px;
+  width: 30%;
+}
+button.boto1{
+  float:right;
+}
+.instruccions{
+  border: 10px solid black;
+  border-radius: 15px;
+  width: 30%;
+  float:right;
+  margin-right: 33%;
+  font-family: 'DotGothic16', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
