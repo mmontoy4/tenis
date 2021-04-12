@@ -7,6 +7,8 @@
     <div class="cap">
       <!--<img src="img/raqueta-tenis-girada.png" alt="Logo pilota tennis" width="150"/>-->
        <link rel="stylesheet" href="css/style.css" />
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
       <h1>Joc de Tenis</h1>
     </div>
   </header>
@@ -16,10 +18,34 @@
     <li><a href="joc.html">Joc</a></li>
   </ul>
 <body>
+  <div class="formulari">
   <form action="" method="">
-    <input type="text" name="usuari" placeholder="Nom de usuari" />
-    <input type="email" name="email" placeholder="Correu electrònic" />
-    <input type="submit" name="enviar" value="Enviar" />
+    <div class="dades">
+      <input type="text" name="usuari" placeholder="Nom de usuari" />
+      <input type="email" name="email" placeholder="Correu electrònic" />
+      </div>
+      <div class="mod">
+        <label>Modalitat de joc: <br />
+          <input type="radio" id="duel" name="modalitat" value="duel" />
+          <label>1 vs 1</label><br />
+          <input type="radio" id="cpu" name="modalitat" value="cpu"/>
+          <label>1 vs CPU</label>
+        </label>
+      </div>
+      <div class="nivell">
+    <label>Dificultat: <br />
+      <input type="radio" id="easy" name="difficult" value="easy"/>
+      <label for="easy">Fàcil</label><br />
+      <input type="radio" id="normal" name="difficult" value="normal"/>
+      <label for="easy">Normal</label><br />
+      <input type="radio" id="hard" name="difficult" value="hard"/>
+      <label for="easy">Difícil</label>
+      </div>
+      <div class="boto">
+        <input type="submit" name="enviar" value="Enviar" />
+      </div>
+    </label>
     </form>
+
 </body>
 </html>

@@ -55,94 +55,31 @@ header{
   padding-top: 30px;
   padding-bottom: 10px;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
 
 }
 
 .formulari{
   border: 15px solid #fb8500;
   border-radius: 20px;
-  width:20%;
-  padding: 20px;
-  margin-left: 40%;
+  width: 33.333%;
+  height: 500px;
+  margin-left: 33.333%;
   margin-top: 5%;
-  margin-bottom: 5%;
 }
-
-form h3{
-  font-family: 'RocknRoll One', sans-serif;
+.dades{
+  margin-left:10%;
+  padding-top:5%;
+  padding-bottom:5%;
 }
-
-form label{
-	width: 95px;
-	font-weight:bold;
-	display:inline-block;
-  font-family: 'RocknRoll One', sans-serif;
-  color:black;
+.mod{
+  margin-left:10%;
+  padding-bottom:5%;
 }
-
-form input[type="text"],
-form input[type="email"]{
-	width:180px;
-	padding:3px 10px;
-	border-bottom:2px solid #03045e;
-	background-color:white;
-	margin:8px 0;
-	display:inline-block;
+.nivell{
+  margin-left:10%;
+  padding-bottom:5%;
 }
-
-input[type="button"]{
-  font-family: 'DotGothic16', sans-serif;
-}
-
-.drets{
-  position:absolute;
-  top: 75%;
-  left:80%;
-  border: 3px double black;
-  width: 300px;
-  height: 200px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-div.drets p{
-margin: 20px;
-font-family: 'DotGothic16', sans-serif;
-}
-
-.peu{
-  position:absolute;
-  top: 91%;
-  right:75%;
-  border: 3px solid white;
-  width: 380px;
-  height: 50px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-div.peu p{
-  background-color: white;
-  margin: 10px;
-  font-family: 'DotGothic16', sans-serif;
-}
-
-div#dades{
-  float:right;
-  margin-left:30px;
-  width: 30%;
-}
-button.boto1{
-  float:right;
-}
-.instruccions{
-  border: 10px solid black;
-  border-radius: 15px;
-  width: 30%;
-  float:right;
-  margin-right: 33%;
-  font-family: 'DotGothic16', sans-serif;
-  background-color: black;
-  color: white;
-  padding: 10px;
+.boto{
+  margin-left:45%;
 }
