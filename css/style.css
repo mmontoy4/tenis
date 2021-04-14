@@ -55,31 +55,69 @@ header{
   padding-top: 30px;
   padding-bottom: 10px;
   text-align: center;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Righteous', cursive;
 
 }
 
 .formulari{
   border: 15px solid #fb8500;
   border-radius: 20px;
-  width: 33.333%;
+  width: 15%;
   height: 500px;
-  margin-left: 33.333%;
   margin-top: 5%;
+  font-family: 'Raleway', sans-serif;
 }
 .dades{
-  margin-left:10%;
+  margin-left:5%;
   padding-top:5%;
   padding-bottom:5%;
+  font-size: 30px;
 }
 .mod{
   margin-left:10%;
   padding-bottom:5%;
+  font-size: 30px;
 }
 .nivell{
   margin-left:10%;
   padding-bottom:5%;
+  font-size: 30px;
 }
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover{
+  background-color: #003153;
+  color:white;
+  transition:1s;
+}
+
 .boto{
-  margin-left:45%;
+  margin-left:33.33%;
+  font-size: 30px;
+}
+footer{
+  border: 1px solid black;
+  text-align: center;
+  font-size: 14px;
+  bottom:0;
+  width: 100%;
+  position:absolute;
+}
+/*Contenidor del joc*/
+#myContainer{
+  position:absolute;
+  top: 20%;
+  left:20%;
+}
+.contador{
+
 }

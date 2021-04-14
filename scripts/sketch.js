@@ -11,7 +11,7 @@ const s = (p) => {
   }
 
   p.setup = function() {
-    p.createCanvas(1500, 900);
+    p.createCanvas(1100, 700);
     pilota=p.createSprite(500,500);
     pilota.addAnimation('run','sprites/pilota/bola1.png','sprites/pilota/bola10.png');
     pilota.changeAnimation('run');
@@ -63,7 +63,7 @@ const s = (p) => {
       dino.position.x = dino.position.x-5;
     }
     if(p.keyDown('d')){
-      dino.mirrorX(-1);
+      dino.mirrorX(+1);
       dino.position.x = dino.position.x+5;
     }
 
