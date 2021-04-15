@@ -4,3 +4,11 @@ this.ballSprite = createSprite(x,y,width,height);
 this.speed=1;
 this.maxSpeed=20;
 setSpeed(speed,angle);
+
+const BALLSIZE = 64;
+
+class Ball{
+
+
+
+}

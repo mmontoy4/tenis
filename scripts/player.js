@@ -6,5 +6,6 @@ class JugadorNoia extends GameObject{
 
   constructor(coordX,coordY) {
     super(coordX,coordY);
+  }
 
 }

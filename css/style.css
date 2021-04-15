@@ -60,11 +60,12 @@ header{
 }
 
 .formulari{
-  border: 15px solid #fb8500;
+  background-color: white;
   border-radius: 20px;
   width: 15%;
   height: 500px;
   margin-top: 5%;
+  margin-left: 20px;
   font-family: 'Raleway', sans-serif;
 }
 .dades{
@@ -105,7 +106,9 @@ input[type=submit]:hover{
   font-size: 30px;
 }
 footer{
-  border: 1px solid black;
+  font-family: 'Denk One', sans-serif;
+  color: white;
+  background-color: #1e6091;
   text-align: center;
   font-size: 14px;
   bottom:0;
@@ -118,6 +121,12 @@ footer{
   top: 20%;
   left:20%;
 }
-.contador{
-
-}
+/*.contador{
+border: 1px solid black;
+width: 15%;
+height: 500px;
+margin-top: 5%;
+float: right;
+font-family: 'Raleway', sans-serif;
+clear:both;
+}*/
