@@ -7,14 +7,19 @@ const s = (p) => {
   p.preload = function() {
 
     fondo = p.loadImage("img/pissta.png");
+    pilota = new Ball(p);
+
+
+    //noia = new Player("jugador1");
+    //dino = new Player("jugador2");
 
   }
 
   p.setup = function() {
     p.createCanvas(1100, 700);
-    pilota=p.createSprite(500,500);
-    pilota.addAnimation('run','sprites/pilota/bola1.png','sprites/pilota/bola10.png');
-    pilota.changeAnimation('run');
+    //pilota=p.createSprite(500,500);
+    //pilota.addAnimation('run','sprites/pilota/bola1.png','sprites/pilota/bola10.png');
+    //pilota.changeAnimation('run');
     //Noia
     noia=p.createSprite(300,300);
     noia.addAnimation('pum','sprites/noia/Walk1.png','sprites/noia/Walk20.png');
@@ -23,7 +28,7 @@ const s = (p) => {
     dino=p.createSprite(900,300);
     dino.addAnimation('pam','sprites/dino/Walk1.png','sprites/dino/Walk10.png');
     dino.changeAnimation('pam');
-
+    pilota.saqueInicial(p);
 
   }
 
