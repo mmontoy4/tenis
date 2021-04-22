@@ -23,6 +23,7 @@ const s = (p) => {
     //Noia
     noia=p.createSprite(300,300);
     noia.addAnimation('pum','sprites/noia/Walk1.png','sprites/noia/Walk20.png');
+    //noia.addAnimation('pum','sprites/noia100/Walk1.png','sprites/noia100/Walk20.png');
     noia.changeAnimation('pum');
 
     dino=p.createSprite(900,300);
@@ -41,46 +42,46 @@ const s = (p) => {
 
     //La pilota rebota amb els limits de la pista
 
-    //Moviment del personatge noia sobre l'eix X de dreta - esquerra.
+    //Moviment del personatge dino sobre l'eix X de dreta - esquerra.
 
     if(p.keyIsDown(p.RIGHT_ARROW)){
-      noia.mirrorX(+1);
-      noia.position.x = noia.position.x+5;
-    }
-    if(p.keyIsDown(p.LEFT_ARROW)){
-      noia.mirrorX(-1);
-      noia.position.x = noia.position.x-5;
-    }
-
-    //Moviment del personatge noia sobre l'eix Y de adalt - abaix.
-
-    if(p.keyIsDown(p.UP_ARROW)){
-      noia.position.y = noia.position.y-5;
-    }
-    if(p.keyIsDown(p.DOWN_ARROW)){
-      noia.position.y = noia.position.y+5;
-    }
-
-    //Moviment del personatge dino sobre l'eix X de esquerra - dreta.
-
-   if(p.keyDown('a')){
-      dino.mirrorX(-1);
-      dino.position.x = dino.position.x-5;
-    }
-    if(p.keyDown('d')){
       dino.mirrorX(+1);
       dino.position.x = dino.position.x+5;
+    }
+    if(p.keyIsDown(p.LEFT_ARROW)){
+      dino.mirrorX(-1);
+      dino.position.x = dino.position.x-5;
     }
 
     //Moviment del personatge dino sobre l'eix Y de adalt - abaix.
 
+    if(p.keyIsDown(p.UP_ARROW)){
+      dino.position.y = dino.position.y-5;
+    }
+    if(p.keyIsDown(p.DOWN_ARROW)){
+      dino.position.y = dino.position.y+5;
+    }
+
+    //Moviment del personatge noia sobre l'eix X de esquerra - dreta.
+
+   if(p.keyDown('a')){
+      noia.mirrorX(-1);
+      noia.position.x = noia.position.x-5;
+    }
+    if(p.keyDown('d')){
+      noia.mirrorX(+1);
+      noia.position.x = noia.position.x+5;
+    }
+
+    //Moviment del personatge noia sobre l'eix Y de adalt - abaix.
+
     if(p.keyDown('w')){
 
-       dino.position.y = dino.position.y-5;
+       noia.position.y = noia.position.y-5;
      }
      if(p.keyDown('s')){
 
-       dino.position.y = dino.position.y+5;
+       noia.position.y = noia.position.y+5;
      }
 
   }
