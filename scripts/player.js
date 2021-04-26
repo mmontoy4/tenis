@@ -13,7 +13,7 @@ class Player {
     }
     else if ( strjugador === "Jugador2")
     {
-      this.spritePlayer = p.createSprite(900,300);
+      this.spritePlayer = p.createSprite(1000,300);
       this.spritePlayer.addAnimation('pam','sprites/dino/Walk1.png','sprites/dino/Walk10.png');
       this.spritePlayer.changeAnimation('pam');
       this.spritePlayer.immovable = true;
