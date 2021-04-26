@@ -121,6 +121,13 @@ footer{
   top: 20%;
   left:20%;
 }
+
+.ajuda figure img{
+  position: absolute;
+  width: 30px;
+  top: 25%;
+  margin-left: 10%;
+}
 /*.contador{
 border: 1px solid black;
 width: 15%;
