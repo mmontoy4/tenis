@@ -1,3 +1,8 @@
+<script>
+function mayus(e) {
+    e.value = e.value.toUpperCase();
+}
+</script>
 <!DOCTYPE html>
 <html>
 
@@ -32,6 +37,9 @@
   <div class="formulari">
     <form action="" method="">
       <div class="dades">
+        <input type="text" name="nom" placeholder="El teu nom" onkeyup="mayus(this);"/>
+        <input type="text" name="cognom" placeholder="El teu cognom" onkeyup="mayus(this);"/>
+        <input type="number" id="edat" name="tentacles" min="0" max="105" placeholder="Introdueix la teva edat">
         <input type="text" name="usuari" placeholder="Nom de usuari" />
         <input type="email" name="email" placeholder="Correu electrònic" />
       </div>
