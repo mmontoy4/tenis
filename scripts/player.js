@@ -4,7 +4,7 @@ class Player {
 
   constructor(p,strjugador) {
     this.name=
-    this.points =0;
+    this.points = 0;
     if( strjugador === "Jugador1"){
       this.spritePlayer = p.createSprite(100,300);
       this.spritePlayer.addAnimation('pum','sprites/noia/Walk1.png','sprites/noia/Walk20.png');

@@ -5,7 +5,7 @@ const s = (p) => {
   var fondo;
   var walltop;
   var wallbottom;
-
+  var swing;
   p.preload = function() {
 
     fondo = p.loadImage("img/pissta.png");
@@ -52,6 +52,35 @@ const s = (p) => {
        noia.moveDown();
        //noia.position.y = noia.position.y+5;
      }
+    if(pilota.ballSprite.bounce(noia.spritePlayer)) {
+      swing = (pilota.ballSprite.position.y-noia.spritePlayer.position.y)/3;
+      pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()+swing);
+      pilota.speed = pilota.speed * 1.10;
+    }
+
+    if(pilota.ballSprite.bounce(dino.spritePlayer)) {
+      swing = (pilota.ballSprite.position.y-dino.spritePlayer.position.y)/3;
+      pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()-swing);
+      pilota.speed = pilota.speed * 1.10;
+    }
+
+    if(pilota.ballSprite.position.x<0) {
+      pilota.ballSprite.position.x = p.width/2;
+      pilota.ballSprite.position.y = p.height/2;
+      pilota.ballSprite.setSpeed(pilota.speed * 1.10, 0);
+      pilota.speed = pilota.speed * 1.10;
+      dino.points = dino.points + 1;
+      console.log(dino.points);
+      console.log(dino.points);
+    }
+
+    if(pilota.ballSprite.position.x> p.width) {
+      pilota.ballSprite.position.x = p.width/2;
+      pilota.ballSprite.position.y = p.height/2;
+      pilota.ballSprite.setSpeed(pilota.speed * 1.10, 180);
+      pilota.speed = pilota.speed * 1.10;
+      noia.points = noia.points + 1;
+    }
 
   }
 }
