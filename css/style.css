@@ -122,6 +122,12 @@ footer{
   left:20%;
 }
 
+#myContainer2{
+
+  position:absolute;
+  left:80%;
+}
+
 .ajuda figure img{
   position: absolute;
   width: 30px;
