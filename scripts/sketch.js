@@ -1,5 +1,6 @@
 var dino;
 var noia;
+var time;
 const s = (p) => {
   var pilota;
   var fondo;
@@ -14,6 +15,7 @@ const s = (p) => {
 
     noia = new Player(p,"Jugador1");
     dino = new Player(p,"Jugador2");
+    time = 10;
 
   }
 
@@ -29,59 +31,63 @@ const s = (p) => {
   }
 
   p.draw = function() {
+    if (p.frameCount % 60 === 0 && time > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+      time--;
+    }
+    if(time !== 0){
     p.background(fondo);
     pilota.ballSprite.bounce(p.walltop);
     pilota.ballSprite.bounce(p.wallbottom);
   //  dino.mirrorX(-1);
     p.drawSprites();
 
-    if(p.keyIsDown(p.UP_ARROW)){
-      dino.moveUp();
-      //dino.position.y = dino.position.y-5;
-    }
-    if(p.keyIsDown(p.DOWN_ARROW)){
-      dino.moveDown();
-      //dino.position.y = dino.position.y+5;
-    }
+      if(p.keyIsDown(p.UP_ARROW)){
+        dino.moveUp();
+        //dino.position.y = dino.position.y-5;
+      }
+      if(p.keyIsDown(p.DOWN_ARROW)){
+        dino.moveDown();
+        //dino.position.y = dino.position.y+5;
+      }
 
-    if(p.keyDown('w')){
-       noia.moveUp();
-       //noia.position.y = noia.position.y-5;
-     }
-     if(p.keyDown('s')){
-       noia.moveDown();
-       //noia.position.y = noia.position.y+5;
-     }
-    if(pilota.ballSprite.bounce(noia.spritePlayer)) {
-      swing = (pilota.ballSprite.position.y-noia.spritePlayer.position.y)/3;
-      pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()+swing);
-      pilota.speed = pilota.speed * 1.10;
-    }
+      if(p.keyDown('w')){
+         noia.moveUp();
+         //noia.position.y = noia.position.y-5;
+       }
+       if(p.keyDown('s')){
+         noia.moveDown();
+         //noia.position.y = noia.position.y+5;
+       }
+      if(pilota.ballSprite.bounce(noia.spritePlayer)) {
+        swing = (pilota.ballSprite.position.y-noia.spritePlayer.position.y)/3;
+        pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()+swing);
+        pilota.speed = pilota.speed * 1.10;
+      }
 
-    if(pilota.ballSprite.bounce(dino.spritePlayer)) {
-      swing = (pilota.ballSprite.position.y-dino.spritePlayer.position.y)/3;
-      pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()-swing);
-      pilota.speed = pilota.speed * 1.10;
-    }
+      if(pilota.ballSprite.bounce(dino.spritePlayer)) {
+        swing = (pilota.ballSprite.position.y-dino.spritePlayer.position.y)/3;
+        pilota.ballSprite.setSpeed(pilota.speed * 1.10, pilota.ballSprite.getDirection()-swing);
+        pilota.speed = pilota.speed * 1.10;
+      }
 
-    if(pilota.ballSprite.position.x<0) {
-      pilota.ballSprite.position.x = p.width/2;
-      pilota.ballSprite.position.y = p.height/2;
-      pilota.ballSprite.setSpeed(pilota.speed * 1.10, 0);
-      pilota.speed = pilota.speed * 1.10;
-      dino.points = dino.points + 1;
-      console.log(dino.points);
-      console.log(dino.points);
-    }
+      if(pilota.ballSprite.position.x<0) {
+        pilota.ballSprite.position.x = p.width/2;
+        pilota.ballSprite.position.y = p.height/2;
+        pilota.ballSprite.setSpeed(pilota.speed * 1.10, 0);
+        pilota.speed = pilota.speed * 1.10;
+        dino.points = dino.points + 1;
+        console.log(dino.points);
+        console.log(dino.points);
+      }
 
-    if(pilota.ballSprite.position.x> p.width) {
-      pilota.ballSprite.position.x = p.width/2;
-      pilota.ballSprite.position.y = p.height/2;
-      pilota.ballSprite.setSpeed(pilota.speed * 1.10, 180);
-      pilota.speed = pilota.speed * 1.10;
-      noia.points = noia.points + 1;
+      if(pilota.ballSprite.position.x> p.width) {
+        pilota.ballSprite.position.x = p.width/2;
+        pilota.ballSprite.position.y = p.height/2;
+        pilota.ballSprite.setSpeed(pilota.speed * 1.10, 180);
+        pilota.speed = pilota.speed * 1.10;
+        noia.points = noia.points + 1;
+      }
     }
-
   }
 }
 let myp5 = new p5(s, 'myContainer');
@@ -95,9 +101,11 @@ const e = (a) => {
   a.draw = function(){
     let score1 =  "Score dino: " + dino.points;
     let score2 =  "Score noia: " + noia.points;
+    let timer = "Temps restant: " + time;
     a.background('rgba(0,255,0, 0.25)');
-    a.text(score1, a.width / 2, a.height * 0.5);
-    a.text(score2, a.width / 2, a.height * 0.6);
+    a.text(score1, a.width * 0.1, a.height * 0.5);
+    a.text(score2, a.width * 0.1, a.height * 0.6);
+    a.text(timer, a.width * 0.1, a.height * 0.7);
   }
 
 }
