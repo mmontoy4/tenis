@@ -34,7 +34,7 @@ const s = (p) => {
     if (p.frameCount % 60 === 0 && time > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
       time--;
     }
-    if(time !== 0){
+    if(time !== 0 && dino.points !== 10 && noia.points !==10){
     p.background(fondo);
     pilota.ballSprite.bounce(p.walltop);
     pilota.ballSprite.bounce(p.wallbottom);
@@ -87,6 +87,8 @@ const s = (p) => {
         pilota.speed = pilota.speed * 1.10;
         noia.points = noia.points + 1;
       }
+    }else if(noia.points === 10 || dino.points === 10){
+      time = 0;
     }
   }
 }
