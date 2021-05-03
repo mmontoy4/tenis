@@ -91,22 +91,3 @@ const s = (p) => {
   }
 }
 let myp5 = new p5(s, 'myContainer');
-
-const e = (a) => {
-  a.setup = function() {
-    a.createCanvas(150, 200);
-
-  }
-
-  a.draw = function(){
-    let score1 =  "Score dino: " + dino.points;
-    let score2 =  "Score noia: " + noia.points;
-    let timer = "Temps restant: " + time;
-    a.background('rgba(0,255,0, 0.25)');
-    a.text(score1, a.width * 0.1, a.height * 0.5);
-    a.text(score2, a.width * 0.1, a.height * 0.6);
-    a.text(timer, a.width * 0.1, a.height * 0.7);
-  }
-
-}
-let myp52 = new p5(e, 'myContainer');
