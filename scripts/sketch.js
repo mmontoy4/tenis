@@ -15,7 +15,7 @@ const s = (p) => {
 
     noia = new Player(p,"Jugador1");
     dino = new Player(p,"Jugador2");
-    time = 10;
+    time = 60;
 
   }
 

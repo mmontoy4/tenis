@@ -60,29 +60,9 @@ if(expresion_regular_dni.test (dni) == true){
 <ul>
   <li><a class="active" href="#pacman">Tenis</a></li>
   <li><a href="index.html">Inici</a></li>
-  <li><a href="joc.html">Joc</a></li>
+  <li><a href="index.html">Joc</a></li>
+  <li><a href="html/info.html">Informació sobre el joc</a></li>
 </ul>
-  <button onclick="mostrarOcultar()">Informació sobre el sistema</button>
-  <div id="dades" style="display: none">
-    <table>
-      <td>
-        <script>
-
-          document.write(" ▪ Nom del Navegador i versió: ");
-          document.write(navigator.userAgent + "<br>");;
-          document.write(" ▪ Versió del HTML: ");
-          document.write(navigator.appVersion + "<br>");
-          document.write(" ▪ Propietari del Navegador: ");
-          document.write(navigator.appCodeName + "<br>");
-          document.write(" ▪ Plataforma del S.O: ");
-          document.write(navigator.platform + "<br>");
-          document.write(" ▪ Galetes (true / false): ");
-          document.write(navigator.cookieEnabled + "<br>");
-
-        </script>
-      </td>
-    </table>
-  </div>
   <div class="formulari">
     <form action="" method="">
       <div class="dades">
@@ -143,13 +123,3 @@ Rules
 </body>
 
 </html>
-<script>
-  function mostrarOcultar() {
-    var x = document.getElementById("dades");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-</script>

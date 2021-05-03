@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Righteous&display=swap" rel="stylesheet">
+    <title>Informació</title>
+</head>
+<body>
+<header>
+    <div class="cap">
+        <!--<img src="img/raqueta-tenis-girada.png" alt="Logo pilota tennis" width="150"/>-->
+        <h1>Joc de Tenis</h1>
+    </div>
+</header>
+<ul>
+    <li><a class="active" href="#pacman">Tenis</a></li>
+    <li><a href="index.html">Inici</a></li>
+    <li><a href="index.html">Joc</a></li>
+    <li><a href="info.html">Informació sobre el joc</a></li>
+</ul>
+<button onclick="mostrarOcultar()">Informació sobre el sistema</button>
+<div id="dades" style="display: none">
+    <table>
+        <td>
+            <script>
+
+                document.write(" ▪ Nom del Navegador i versió: ");
+                document.write(navigator.userAgent + "<br>");;
+                document.write(" ▪ Versió del HTML: ");
+                document.write(navigator.appVersion + "<br>");
+                document.write(" ▪ Propietari del Navegador: ");
+                document.write(navigator.appCodeName + "<br>");
+                document.write(" ▪ Plataforma del S.O: ");
+                document.write(navigator.platform + "<br>");
+                document.write(" ▪ Galetes (true / false): ");
+                document.write(navigator.cookieEnabled + "<br>");
+
+            </script>
+        </td>
+    </table>
+</div>
+<div>
+    <p>
+        Joc fet amb la llibreria p5.js i p5.play.
+        p5.js actualment supervisat per Moira Turner i va ser crat per Lauren Lee McCarthy. p5.js està sent desenvolupat per una comunitat de col·laboradors, amb el support de Processing Foundation i NYU ITP. L'identitat de marca i el disseny gráfic creat per Jerel Johnson.
+        p5.play creat per Paolo Pedercini
+    </p>
+</div>
+</body>
+</html>
+<script>
+    function mostrarOcultar() {
+        var x = document.getElementById("dades");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
